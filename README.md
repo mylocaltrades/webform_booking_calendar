@@ -1,24 +1,29 @@
-# Webform Booking Calendar
+Webform Booking Calendar
+========================
 
-The Webform Booking Calendar module is an extension of the [Webform Booking module](https://www.drupal.org/project/webform_booking), adding a flexible and user-friendly calendar block to display bookings visually within Drupal.
+The Webform Booking Calendar module extends the Webform Booking module by adding a calendar block for visualizing bookings within Drupal.
 
-## Features
-- **Visual Booking Management:** Displays bookings in an interactive FullCalendar.js-based view.
-- **Calendar Integration:** Automatically calculates session end times based on the Webform Booking slot duration.
-- **Customizable Block:** Add a configurable calendar block to any page and choose the Webform Booking elements to display.
-- **Permissions:** Built-in permission checks to ensure only authorized users can view the calendar.
+Features:
+---------
+- Interactive calendar view of Webform Booking submissions.
+- Displays booking details such as session duration, customer info, and booking details.
+- Fully responsive and user-friendly, powered by FullCalendar.js.
+- Supports multiple Webforms and booking elements.
+- Permission-based visibility.
 
-## Requirements
-- Drupal 9 or later
-- [Webform Booking module](https://www.drupal.org/project/webform_booking)
+Requirements:
+-------------
+- Webform module
+- Webform Booking module
 
-## Installation
-1. Install the Webform Booking Calendar module like any other Drupal module:
-   ```bash
-   composer require drupal/webform_booking_calendar
-2. Enable the module through the UI or drush en webform_booking_calendar
+Installation:
+-------------
+1. Install the module as usual. Place the folder in `modules/custom/` or `modules/contrib/`.
+2. Enable the module via the Drupal UI or Drush: `drush en webform_booking_calendar`.
+3. Place the Webform Booking Calendar block on your desired page via the Block Layout settings.
+4. Configure the block to specify which Webforms and elements to display in the calendar.
 
-## Usage
-1. Add the Webform Booking Calendar block to any region via the block placement UI.
-2. Configure the block settings to select the desired Webform Booking elements.
-3. View and manage bookings visually using the calendar interface.
+Credits:
+--------
+Author: https://www.drupal.org/my-local-trades
+Maintainers: (https://www.drupal.org/u/mylocaltrades)
