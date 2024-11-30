@@ -25,5 +25,5 @@ Installation:
 
 Credits:
 --------
-Author: [Your Name/Drupal.org Username]
-Maintainers: [Your Name/Drupal.org Username]
+Author: https://www.drupal.org/my-local-trades
+Maintainers: (https://www.drupal.org/u/mylocaltrades)
