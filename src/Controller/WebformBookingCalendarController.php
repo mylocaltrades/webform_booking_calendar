@@ -90,13 +90,22 @@ class WebformBookingCalendarController extends ControllerBase {
       ->condition('wsd.sid', $submission_id);
     $results = $query->execute()->fetchAllKeyed();
 
-    // Format the details as a string, excluding PayPal transaction.
+    // Format the details as a string.
     $details = [];
+    $total_price = 'N/A';
+
     foreach ($results as $name => $value) {
-      if ($name !== 'paypal_transaction') { // Exclude PayPal transaction.
+      if ($name === 'paypal_transaction') {
+        // Decode the PayPal transaction JSON and extract the price.
+        $decoded = json_decode($value, TRUE);
+        $total_price = $decoded['purchase_units'][0]['amount']['value'] ?? 'N/A';
+      } else {
         $details[] = ucfirst(str_replace('_', ' ', $name)) . ': ' . $value;
       }
     }
+
+    // Add the total price to the tooltip details.
+    $details[] = 'Total Price Paid: ' . $total_price;
 
     return implode("\n", $details); // Return the details as a newline-separated string.
   }
