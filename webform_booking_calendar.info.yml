@@ -3,6 +3,7 @@ type: module
 description: 'Displays Webform booking data in a calendar view using FullCalendar.'
 package: Custom
 core_version_requirement: ^9 || ^10 || ^11
-version: 1.0.0
+project: webform_booking_calendar
+version: 1.0.1
 dependencies:
   - drupal:system
